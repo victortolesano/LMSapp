@@ -3,7 +3,7 @@ package com.br.herbalistapp
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class CadastroUsuarioActivity : AppCompatActivity() {
+class TelaCadastroActivity : DebugActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
