@@ -2,5 +2,6 @@
     <string name="app_name">HerbalistApp</string>
     <string name="mensagem_inicial">Seja Bem Vindo</string>
     <string name="mensagem_perfil">Perfil</string>
+    <string name="mensagem_cadastro">Cadastre Sua Conta</string>
 
 </resources>

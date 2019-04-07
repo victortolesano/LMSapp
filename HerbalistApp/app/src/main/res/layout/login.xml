@@ -16,8 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:hint="Digite o seu usuário"
-            android:text="Entre com o usuário"
+            android:hint="Entre com o usuário"
+
             android:ems="10"
             android:id="@+id/campo_usuario"/>
     <TextView
@@ -27,15 +27,18 @@
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="Digite a sua senha"
-            android:text="Digite a senha"
+            android:inputType="textPassword"
+            android:hint="Entre com a senha"
             android:ems="10"
-            android:id="@+id/compo_senha"/>
+            android:id="@+id/campo_senha_login"/>
     <Button
             android:text="Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/botao_login"/>
+    <Button
+            android:text="Caso não tenha uma conta click aqui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/botao_cadastrar"/>
     <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content" app:srcCompat="@drawable/lms_app" android:id="@+id/lms_app"/>

@@ -16,11 +16,17 @@ class MainActivity : DebugActivity() {
 
 
         lms_app.setImageResource(R.drawable.lms2)
+
         botao_login.setOnClickListener {
             Toast.makeText(this,"clicou no botao",Toast.LENGTH_SHORT).show()
         }
 
+        botao_cadastrar.setOnClickListener {
+            Toast.makeText(this,"clicou no botao para cadastrar",Toast.LENGTH_SHORT).show()
+        }
+
         botao_login.setOnClickListener { onClickBotao() }
+        botao_cadastrar.setOnClickListener { onClickBotao() }
 
     }
 
