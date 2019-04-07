@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:orientation="vertical">
+
+    <TextView
+            android:text="@string/mensagem_inicial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView"/>
+    <TextView
+            android:text="Usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView3"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Digite o seu usuário"
+            android:text="Entre com o usuário"
+            android:ems="10"
+            android:id="@+id/campo_usuario"/>
+    <TextView
+            android:text="Senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView4"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Digite a sua senha"
+            android:text="Digite a senha"
+            android:ems="10"
+            android:id="@+id/compo_senha"/>
+    <Button
+            android:text="Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/botao_login"/>
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/lms_app" android:id="@+id/lms_app"/>
+</LinearLayout>
