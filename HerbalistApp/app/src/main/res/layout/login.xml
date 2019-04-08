@@ -17,7 +17,6 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:hint="Entre com o usuário"
-
             android:ems="10"
             android:id="@+id/campo_usuario"/>
     <TextView

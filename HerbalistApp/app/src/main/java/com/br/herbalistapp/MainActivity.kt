@@ -32,13 +32,8 @@ class MainActivity : DebugActivity() {
 
     fun onClickBotaoLogin(){
         val intent = Intent(this,TelaPerfilActivity::class.java)
-//        val param = Bundle()
-        intent.putExtra("name","caio")
-//        param.putString("nome","victor")
-//        param.putString()
+        intent.putExtra("name","victor")
         startActivity(intent)
-//        intent.putExtras(param)
-
     }
 
     fun onClickBotaoCadastrar(){
