@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:text="ALTERE A SUA SENHA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView11"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Digite a nova Senha"
+            android:ems="10"
+            android:id="@+id/alterar_senha"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Digite novamente a Senha"
+            android:ems="10"
+            android:id="@+id/repetir_senha"/>
+    <Button
+            android:text="Enviar alterações"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/enviar_alteracao_senha"/>
+</LinearLayout>

@@ -14,16 +14,7 @@ class MainActivity : DebugActivity() {
         setContentView(R.layout.login)
 
 
-
         lms_app.setImageResource(R.drawable.lms_app)
-
-        botao_login.setOnClickListener {
-            Toast.makeText(this,"clicou no botao",Toast.LENGTH_SHORT).show()
-        }
-
-        botao_cadastrar.setOnClickListener {
-            Toast.makeText(this,"clicou no botao para cadastrar",Toast.LENGTH_SHORT).show()
-        }
 
         botao_login.setOnClickListener { onClickBotaoLogin() }
         botao_cadastrar.setOnClickListener { onClickBotaoCadastrar() }
@@ -32,7 +23,7 @@ class MainActivity : DebugActivity() {
 
     fun onClickBotaoLogin(){
         val intent = Intent(this,TelaPerfilActivity::class.java)
-        intent.putExtra("name","victor")
+//        intent.putExtra("nome","${R.id.campo_nome}")
         startActivity(intent)
     }
 

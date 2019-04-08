@@ -8,18 +8,6 @@
             android:text="@string/mensagem_perfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView10"/>
-    <RadioButton
-            android:text="Mudar Senha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/radioButton"/>
-    <RadioButton
-            android:text="Ver Historico"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/radioButton2"/>
-    <RadioButton
-            android:text="Outros Dados da Conta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/radioButton3"/>
     <Switch
             android:text="fazer upload da imagem"
             android:layout_width="match_parent"
