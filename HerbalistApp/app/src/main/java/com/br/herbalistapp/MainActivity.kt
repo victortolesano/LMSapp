@@ -25,7 +25,6 @@ class MainActivity : DebugActivity() {
     fun onClickBotaoLogin(){
         var username = findViewById<TextView>(R.id.campo_usuario)
         var password = findViewById<TextView>(R.id.campo_senha_login)
-
         val valorUsuario = username.text.toString()
         val valorSenha = password.text.toString()
 
