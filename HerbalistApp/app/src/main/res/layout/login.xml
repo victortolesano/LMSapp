@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
-              android:layout_height="match_parent" android:orientation="vertical">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <TextView
             android:text="@string/mensagem_inicial"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"/>
     <TextView
             android:text="Usuario"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/textView3"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"/>
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,7 +27,8 @@
     <TextView
             android:text="Senha"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/textView4"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"/>
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,15 +36,27 @@
             android:hint="Entre com a senha"
             android:ems="10"
             android:id="@+id/campo_senha_login"/>
-    <Button
-            android:text="Login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/botao_login"/>
+
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+        <Button
+                android:text="Login"
+                android:stateListAnimator="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/botao_login"/>
+        <ProgressBar android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/progressBar"/>
+
+    </FrameLayout>
     <Button
             android:text="Caso não tenha uma conta click aqui"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/botao_cadastrar"/>
     <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/lms_app" android:id="@+id/lms_app"/>
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/lms_app"
+            android:id="@+id/lms_app"/>
 </LinearLayout>

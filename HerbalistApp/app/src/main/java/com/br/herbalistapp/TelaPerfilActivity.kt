@@ -13,9 +13,9 @@ class TelaPerfilActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.perfil)
-        var params = intent.extras
-        val nome = params.get("name")
-        Toast.makeText(this,"${nome}", Toast.LENGTH_SHORT).show()
+//        var params = intent.extras
+//        val nome = params.get("name")
+//        Toast.makeText(this,"${nome}", Toast.LENGTH_SHORT).show()
 
     }
 
@@ -41,7 +41,7 @@ class TelaPerfilActivity : DebugActivity() {
             Toast.makeText(this,"configurações",Toast.LENGTH_SHORT).show()
         }
 
-        return true
+        return super.onOptionsItemSelected(item)
     }
 
 

@@ -14,7 +14,7 @@ class TelaCadastroActivity : DebugActivity() {
         setContentView(R.layout.cadastro)
 
         botao_enviar_cadastro.setOnClickListener {
-            Toast.makeText(this,"clicou no botao para cadastrar", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"cadastro enviado", Toast.LENGTH_SHORT).show()
         }
     }
 }
