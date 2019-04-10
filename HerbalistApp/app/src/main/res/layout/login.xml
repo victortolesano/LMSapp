@@ -7,6 +7,8 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
+
+
     <TextView
             android:text="@string/mensagem_inicial"
             android:layout_width="wrap_content"
@@ -47,7 +49,9 @@
                 android:id="@+id/botao_login"/>
         <ProgressBar android:layout_width="match_parent"
                      android:layout_height="wrap_content"
-                     android:layout_gravity="center"
+                     android:layout_gravity="center_horizontal|center_vertical"
+                     android:visibility="invisible"
+                     android:onClick="botao_login"
                      style="?android:attr/progressBarStyle"
                      android:id="@+id/progressBar"/>
 
@@ -62,3 +66,4 @@
             app:srcCompat="@drawable/lms_app"
             android:id="@+id/lms_app"/>
 </LinearLayout>
+
