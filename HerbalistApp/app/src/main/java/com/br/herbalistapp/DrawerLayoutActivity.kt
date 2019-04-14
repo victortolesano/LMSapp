@@ -2,7 +2,7 @@ package com.br.herbalistapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
+//import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
@@ -20,10 +20,10 @@ class DrawerLayoutActivity : AppCompatActivity(), NavigationView.OnNavigationIte
         setContentView(R.layout.activity_drawer_layout)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+//        fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show()
+//        }
 
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
@@ -43,7 +43,7 @@ class DrawerLayoutActivity : AppCompatActivity(), NavigationView.OnNavigationIte
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // adiciona itens na barra de ação
         menuInflater.inflate(R.menu.drawer_layout, menu)
         return true
     }
@@ -63,14 +63,16 @@ class DrawerLayoutActivity : AppCompatActivity(), NavigationView.OnNavigationIte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
+        // faz as ações dos click
         when (item.itemId) {
             R.id.nav_camera -> {
-                // Handle the camera action
+                // fazer as ações da camera aqui
+                var intent = Intent(this, TelaImportarFotoActivity::class.java)
+                startActivity(intent)
+                Toast.makeText(this,"Importar Foto",Toast.LENGTH_SHORT).show()
             }
 
             R.id.nav_config -> {
-
                 var intent = Intent(this, TelaConfigActivity::class.java)
                 startActivity(intent)
                 Toast.makeText(this,"configurações",Toast.LENGTH_SHORT).show()

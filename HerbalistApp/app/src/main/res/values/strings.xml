@@ -13,6 +13,6 @@
     <string name="nav_header_title">usuario</string>
     <string name="nav_header_subtitle">usuario@hotmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_sair">sair</string>
+    <string name="menu_drawerLayout_action_sair">sair</string>
 
 </resources>

@@ -6,25 +6,23 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import kotlinx.android.synthetic.main.configuracoes.*
+import kotlinx.android.synthetic.main.activity_tela_importar_foto.*
 
-class TelaConfigActivity : DebugActivity() {
+class TelaImportarFotoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.configuracoes)
+        setContentView(R.layout.activity_tela_importar_foto)
 
-        configuracao_layout.setImageResource(R.drawable.configuracao_layout)
-
-        botao_alterar_senha.setOnClickListener { onClickBotaoAlterarSenha() }
-
+//        botao_importar_foto.setOnClickListener { onClickBotaoImportarFoto() }
     }
 
-    fun onClickBotaoAlterarSenha(){
-        val intent = Intent(this,TelaAlterarSenhaActivity::class.java)
-        Toast.makeText(this,"alterar senha", Toast.LENGTH_SHORT).show()
-        startActivity(intent)
-    }
+//    fun onClickBotaoImportarFoto(){
+//        val intent = Intent(this,xx::class.java)
+//        Toast.makeText(this,"alterar senha", Toast.LENGTH_SHORT).show()
+//        startActivity(intent)
+//    }
+
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -47,7 +45,4 @@ class TelaConfigActivity : DebugActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-
 }
-
-
