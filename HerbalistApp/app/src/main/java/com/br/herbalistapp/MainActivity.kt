@@ -30,7 +30,7 @@ class MainActivity : DebugActivity() {
         val valorSenha = password.text.toString()
 
         if (valorUsuario.equals(USERNAME) && valorSenha.equals(PASSWORD)) {
-            val intent = Intent(this,TelaPerfilActivity::class.java)
+            val intent = Intent(this,DrawerLayoutActivity::class.java)
             Toast.makeText(this,"logado",Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }

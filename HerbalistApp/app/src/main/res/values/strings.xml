@@ -7,5 +7,12 @@
     <string name="action_atualziar">Atualizar</string>
     <string name="action_config">Configurações</string>
     <string name="mensagem_configuracao">Configure a sua conta</string>
+    <string name="navigation_drawer_open">Aberto</string>
+    <string name="navigation_drawer_close">fechado</string>
+    <string name="title_activity_drawer_layout">HerbalistApp</string>
+    <string name="nav_header_title">usuario</string>
+    <string name="nav_header_subtitle">usuario@hotmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_drawerLayout_action_sair">sair</string>
 
 </resources>
