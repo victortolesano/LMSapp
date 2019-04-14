@@ -8,14 +8,7 @@
             android:text="alterar senha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/botao_alterar_senha"/>
-    <Button
-            android:text="alterar telefone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/botaoa_lterar_telefone"/>
-    <Button
-            android:text="Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/button3"/>
+
     <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content" app:srcCompat="@drawable/configuracao_layout"
