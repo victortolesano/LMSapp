@@ -3,6 +3,7 @@
              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
+             android:background="#ffffff"
              android:id="@+id/Frame_layout_principal">
     <LinearLayout
             android:layout_width="match_parent"
@@ -13,6 +14,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" app:srcCompat="@drawable/userphoto" android:id="@+id/imageView2"/>
         <EditText
+                android:background="@drawable/reg_edittext_style"
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -20,6 +22,7 @@
                 android:ems="10"
                 android:id="@+id/campo_nome"/>
         <EditText
+                android:background="@drawable/reg_edittext_style"
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
@@ -27,6 +30,7 @@
                 android:ems="10"
                 android:id="@+id/campo_Email"/>
         <EditText
+                android:background="@drawable/reg_edittext_style"
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPostalAddress"
@@ -34,12 +38,14 @@
                 android:ems="10"
                 android:id="@+id/campo_endereco"/>
         <EditText
+                android:background="@drawable/reg_edittext_style"
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/campo_numero" android:hint="Numero residencia "/>
         <EditText
+                android:background="@drawable/reg_edittext_style"
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -47,6 +53,7 @@
                 android:ems="10"
                 android:id="@+id/campo_senha"/>
         <Button
+                android:background="@drawable/reg_edittext_style"
                 android:text="Cadastrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
