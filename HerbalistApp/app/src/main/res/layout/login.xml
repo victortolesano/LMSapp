@@ -14,25 +14,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView"/>
-    <TextView
-            android:text="Usuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3"/>
     <EditText
-            android:layout_width="match_parent"
+            android:background="@drawable/reg_edittext_style"
+            android:layout_width="265dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:hint="Entre com o usuário"
             android:ems="10"
             android:id="@+id/campo_usuario"/>
-    <TextView
-            android:text="Senha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView4"/>
     <EditText
-            android:layout_width="match_parent"
+            android:background="@drawable/reg_edittext_style"
+            android:layout_width="265dp"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:hint="Entre com a senha"
@@ -42,12 +34,13 @@
     <FrameLayout android:layout_width="match_parent"
                  android:layout_height="wrap_content">
         <Button
+                android:background="@drawable/reg_btn_style"
                 android:text="Login"
                 android:stateListAnimator="@null"
-                android:layout_width="match_parent"
+                android:layout_width="357dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/botao_login"/>
-        <ProgressBar android:layout_width="match_parent"
+        <ProgressBar android:layout_width="381dp"
                      android:layout_height="wrap_content"
                      android:layout_gravity="center_horizontal|center_vertical"
                      android:visibility="invisible"
@@ -57,8 +50,9 @@
 
     </FrameLayout>
     <Button
+            android:background="@drawable/reg_btn_style"
             android:text="Caso não tenha uma conta click aqui"
-            android:layout_width="match_parent"
+            android:layout_width="357dp"
             android:layout_height="wrap_content" android:id="@+id/botao_cadastrar"/>
     <ImageView
             android:layout_width="match_parent"
