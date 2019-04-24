@@ -12,11 +12,15 @@ class MainActivity : DebugActivity() {
     val USERNAME = "aluno"
     val PASSWORD = "impacta"
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
         lms_app.setImageResource(R.drawable.lms_app)
+
+
 
         botao_login.setOnClickListener { onClickBotaoLogin() }
         botao_cadastrar.setOnClickListener { onClickBotaoCadastrar() }
