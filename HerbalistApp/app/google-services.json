@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "68479829839",
+    "firebase_url": "https://herbalistapp.firebaseio.com",
+    "project_id": "herbalistapp",
+    "storage_bucket": "herbalistapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68479829839:android:e9d86f57e24a5b96",
+        "android_client_info": {
+          "package_name": "com.br.herbalistapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68479829839-v55fc4eiicer61k9fshc32o8s4o7cgqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu7U2FuSxp4N5pwynalGEnhAAtG9AtG4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68479829839-v55fc4eiicer61k9fshc32o8s4o7cgqj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
