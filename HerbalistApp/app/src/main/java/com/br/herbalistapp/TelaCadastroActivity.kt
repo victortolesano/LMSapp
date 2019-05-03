@@ -19,9 +19,9 @@ class TelaCadastroActivity : DebugActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cadastro)
 
-//        botao_enviar_cadastro.setOnClickListener {
-//            Toast.makeText(this,"cadastro enviado", Toast.LENGTH_SHORT).show()
-//        }
+        botao_enviar_cadastro.setOnClickListener {
+            onClickEnviarCadastro()
+        }
 
 //        var fl: FrameLayout = FrameLayout(this)
 //
@@ -33,6 +33,13 @@ class TelaCadastroActivity : DebugActivity() {
 //        text_view.setText("LOADING")
 //        fl.addView(text_view)
 //        setContentView(fl)
+    }
+
+    fun onClickEnviarCadastro() {
+        var nome = findViewById<TextView>(R.id.campo_nome)
+        var email = findViewById<TextView>(R.id.campo_Email)
+        var cpf = findViewById<TextView>(R.id.campo_cpf)
+        var senha = findViewById<TextView>(R.id.campo_senha)
     }
 
     fun enviarCadastro(view: View){
