@@ -7,9 +7,17 @@ import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.DefaultItemAnimator
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
+import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
+import com.br.herbalistapp.adapters.AnimalAdapter
+import com.br.herbalistapp.domain.Animal
+import com.br.herbalistapp.services.AnimalService
 import kotlinx.android.synthetic.main.activity_drawer_layout.*
 import kotlinx.android.synthetic.main.app_bar_drawer_layout.*
 
@@ -17,6 +25,12 @@ class DrawerLayoutActivity : AppCompatActivity(), NavigationView.OnNavigationIte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val recycler = findViewById<RecyclerView>(R.id.recycler_animals)
+        recycler?.layoutManager = LinearLayoutManager(this)
+        recycler?.itemAnimator = DefaultItemAnimator()
+        recycler?.setHasFixedSize(true)
+
         setContentView(R.layout.activity_drawer_layout)
         setSupportActionBar(toolbar)
 
@@ -82,5 +96,14 @@ class DrawerLayoutActivity : AppCompatActivity(), NavigationView.OnNavigationIte
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    fun taskAnimals() {
+        val animals = AnimalService.getAnimals(this)
+        recycler_animals?.adapter = AnimalAdapter(animals) {onClickAnimal(it)}
+    }
+
+    fun onClickAnimal(animal: Animal) {
+        Toast.makeText(this, "Clicou animal $(animal.name)", Toast.LENGTH_SHORT).show()
     }
 }
