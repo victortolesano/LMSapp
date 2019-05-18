@@ -19,7 +19,7 @@ class TelaCadastroActivity : DebugActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cadastro)
 
-        botao_enviar_cadastro.setOnClickListener {
+        cad_botao_enviar_cadastro.setOnClickListener {
             onClickEnviarCadastro()
         }
 
@@ -36,10 +36,10 @@ class TelaCadastroActivity : DebugActivity() {
     }
 
     fun onClickEnviarCadastro() {
-        var nome = findViewById<TextView>(R.id.campo_nome)
-        var email = findViewById<TextView>(R.id.campo_Email)
+        var nome = findViewById<TextView>(R.id.cad_nome)
+        var email = findViewById<TextView>(R.id.cad_campo_Email)
         var cpf = findViewById<TextView>(R.id.campo_cpf)
-        var senha = findViewById<TextView>(R.id.campo_senha)
+        var senha = findViewById<TextView>(R.id.cad_campo_senha)
     }
 
     fun enviarCadastro(view: View){

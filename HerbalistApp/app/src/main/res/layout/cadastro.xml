@@ -10,14 +10,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <Button
-                android:text="camera"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/button_camera"/>
-        <Button
-                android:text="galeria"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/button_galery"/>
         <ImageView
 
                 android:layout_width="204dp"

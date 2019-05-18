@@ -14,7 +14,6 @@ import com.squareup.picasso.Picasso
 
 class AnimalAdapter (
     val animals: List<Animal>,
-
     val onClick: (Animal) -> Unit): RecyclerView.Adapter<AnimalAdapter.DisciplinasViewHolder>() {
     // ViewHolder com os elementos da tela
     class DisciplinasViewHolder(view: View): RecyclerView.ViewHolder(view) {
