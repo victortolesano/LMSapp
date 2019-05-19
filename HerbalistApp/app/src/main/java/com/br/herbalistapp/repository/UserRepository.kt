@@ -1,9 +1,6 @@
 package com.br.herbalistapp.repository
 
-import android.arch.persistence.room.Dao
-import android.arch.persistence.room.Delete
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.Query
+import android.arch.persistence.room.*
 import com.br.herbalistapp.persistence.UserPersistence
 
 @Dao
@@ -15,6 +12,12 @@ interface UserRepository {
     @Query("SELECT * from user")
     fun getAll(): List<UserPersistence>
 
+    @Query("SELECT * FROM user WHERE synchronized = 0")
+    fun getUnsynchronized(): List<UserPersistence>
+
+    @Query("SELECT * FROM user WHERE name = :name AND password = :password")
+    fun getByUsernameAndPassword(name: String, password: String): UserPersistence?
+
     @Query("SELECT MAX(ID) FROM user")
     fun getMaxID(): Long?
 
@@ -23,4 +26,7 @@ interface UserRepository {
 
     @Delete
     fun delete(userPersistence: UserPersistence)
+
+    @Update
+    fun flagAsSynchronized(user: UserPersistence)
 }

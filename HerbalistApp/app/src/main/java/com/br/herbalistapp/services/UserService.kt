@@ -9,33 +9,31 @@ import com.google.gson.JsonObject
 class UserService(val cpf: Long, val email: String, val name: String, val password: String) {
 
 
-    fun save(context: Context) {
+    fun save(context: Context): UserPersistence {
         val dao = DatabaseManager.getUserRepository()
+        val userPersistence = UserPersistence.fromService(this)
+
         if (AndroidUtils.isInternetDisponivel(context)) {
             val memoryUsers = dao.getAll()
             for (user in memoryUsers) {
                 this.postAPI(user)
-                dao.delete(user)
+                user.synchronized = 1
+                dao.flagAsSynchronized(user)
             }
-            val userPersistence = UserPersistence()
-            userPersistence.cpf = this.cpf
-            userPersistence.email = this.email
-            userPersistence.name = this.name
-            userPersistence.password = this.password
             this.postAPI(userPersistence)
         } else {
             println("sem internet")
-            val userPersistence = UserPersistence()
             userPersistence.id = this.nextID()
-            userPersistence.cpf = this.cpf
-            userPersistence.email = this.email
-            userPersistence.name = this.name
-            userPersistence.password = this.password
             dao.insert(userPersistence)
-            println("usuario cadastrado")
-            val result = dao.getAll()
-            println(result)
         }
+
+
+        println("usuario cadastrado")
+        val result = dao.getAll()
+        println(result)
+
+
+        return userPersistence
     }
 
 
