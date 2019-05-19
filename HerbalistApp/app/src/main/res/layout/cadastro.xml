@@ -35,16 +35,6 @@
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
 
-
-                android:inputType="textPostalAddress"
-                android:hint="endereço"
-                android:ems="10"
-                android:id="@+id/cad_campo_endereco"/>
-        <EditText
-                android:background="@drawable/reg_edittext_style"
-                android:layout_width="265dp"
-                android:layout_height="wrap_content"
-
                 android:inputType="number"
                 android:hint="CPF"
                 android:ems="10"
