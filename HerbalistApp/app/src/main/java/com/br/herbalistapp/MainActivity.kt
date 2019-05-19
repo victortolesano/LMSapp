@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
 import android.widget.*
+import com.br.herbalistapp.persistence.LoginPersistence
 import kotlinx.android.synthetic.main.login.*
 
 class MainActivity : DebugActivity() {
@@ -15,6 +16,13 @@ class MainActivity : DebugActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val userLogado = LoginPersistence("", "").find()
+        if (userLogado != null){
+            val intent = Intent(this,
+                DrawerLayoutActivity::class.java)
+            Toast.makeText(this,"logado",Toast.LENGTH_SHORT).show()
+            startActivity(intent)
+        }
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
@@ -30,12 +38,17 @@ class MainActivity : DebugActivity() {
     fun onClickBotaoLogin(){
         var username = findViewById<TextView>(R.id.campo_usuario)
         var password = findViewById<TextView>(R.id.campo_senha_login)
+        var checkBox = findViewById<CheckBox>(R.id.campo_check_box)
         val valorUsuario = username.text.toString()
         val valorSenha = password.text.toString()
 
         if (valorUsuario.equals(USERNAME) && valorSenha.equals(PASSWORD)) {
             val intent = Intent(this,DrawerLayoutActivity::class.java)
             Toast.makeText(this,"logado",Toast.LENGTH_SHORT).show()
+            if (checkBox.isChecked) {
+                val loginPersistence = LoginPersistence(valorUsuario, valorSenha)
+                loginPersistence.save()
+            }
             startActivity(intent)
         }
         else {
