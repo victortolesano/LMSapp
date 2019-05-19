@@ -1,7 +1,9 @@
 package com.br.herbalistapp.database
 
 import android.arch.persistence.room.Room
+import android.arch.persistence.room.migration.Migration
 import com.br.herbalistapp.LMSApplication
+import com.br.herbalistapp.database.migrations.Migrations
 import com.br.herbalistapp.repository.UserRepository
 
 object DatabaseManager {
@@ -13,7 +15,7 @@ object DatabaseManager {
             appContext,
             DatabaseLMS::class.java,
             "lms.sqlite"
-        ).allowMainThreadQueries().build()
+        ).addMigrations(Migrations.MIGRATION_1_2).build()
     }
 
     fun getUserRepository(): UserRepository{

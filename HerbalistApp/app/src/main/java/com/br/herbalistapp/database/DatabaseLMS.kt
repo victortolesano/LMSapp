@@ -5,7 +5,7 @@ import android.arch.persistence.room.RoomDatabase
 import com.br.herbalistapp.persistence.UserPersistence
 import com.br.herbalistapp.repository.UserRepository
 
-@Database(entities = arrayOf(UserPersistence::class), version = 1)
+@Database(entities = arrayOf(UserPersistence::class), version = 2)
 abstract class DatabaseLMS: RoomDatabase() {
 
     abstract fun userRepository() : UserRepository
