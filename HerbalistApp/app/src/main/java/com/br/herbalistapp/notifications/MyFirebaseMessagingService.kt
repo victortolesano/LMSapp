@@ -1,12 +1,15 @@
 package com.br.herbalistapp.notifications
 
+import android.content.Intent
 import android.util.Log
+import com.br.herbalistapp.MainActivity
+import com.br.herbalistapp.R
 import com.br.herbalistapp.persistence.Prefs
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
-    val TAG = "firebase"
+    val TAG = "firebase boladão"
     val FIREBASE_TOKEN_KEY = "FB_TOKEN"
 
     override fun onNewToken(token: String?) {
@@ -19,11 +22,21 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         Log.d(TAG, "onMessageReceived")
 
         if (message?.notification != null) {
-            val title = message.notification?.title
-            val body = message.notification?.body
-
-            Log.d(TAG, title)
-            Log.d(TAG, body)
+            showNotification(message!!.notification!!, message?.data)
         }
+    }
+
+    private fun showNotification(notification: RemoteMessage.Notification, data: Map<String, String>?) {
+        val intent = Intent(this, MainActivity::class.java)
+
+        val title: String = notification.title ?: getString(R.string.app_name)
+        var content = notification.body!!
+
+        // e.g. assuming content = "%s (%s) acabou de se registrar"
+        if (data != null && data!!.isNotEmpty()) {
+            content = content.format(data!!["user"], data!!["cpf"])
+        }
+
+        NotificationUtil.create(this, 1, intent, title, content)
     }
 }
