@@ -8,6 +8,8 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.br.herbalistapp.notifications.NotificationUtil
+import com.br.herbalistapp.persistence.UserPersistence
 import com.br.herbalistapp.services.UserService
 import kotlinx.android.synthetic.main.cadastro.*
 
@@ -34,13 +36,14 @@ class TelaCadastroActivity : DebugActivity() {
     }
 
     fun onClickEnviarCadastro() {
-        val intent = Intent(this,DrawerLayoutActivity::class.java)
+        val intent = Intent(this,MainActivity::class.java)
         var nome = findViewById<TextView>(R.id.cad_nome).text.toString()
         var email = findViewById<TextView>(R.id.cad_campo_Email).text.toString()
         var cpf = findViewById<TextView>(R.id.campo_cpf).text.toString()
         var senha = findViewById<TextView>(R.id.cad_campo_senha).text.toString()
         var userService = UserService(cpf.toLong(), email, nome, senha)
-        userService.save(LMSApplication.getInstance().applicationContext)
+        val user = userService.save(LMSApplication.getInstance().applicationContext)
+        enviaNotificacao(user)
         startActivity(intent)
     }
 
@@ -70,4 +73,10 @@ class TelaCadastroActivity : DebugActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    fun enviaNotificacao(user: UserPersistence) {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra("user", user)
+        NotificationUtil.create(this, 1, intent,
+            "Cadastrado com sucesso", "Novo usuário cadastrado: ${user}")
+    }
 }
