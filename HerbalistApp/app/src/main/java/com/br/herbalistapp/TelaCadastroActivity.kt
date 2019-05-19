@@ -39,7 +39,7 @@ class TelaCadastroActivity : DebugActivity() {
         var email = findViewById<TextView>(R.id.cad_campo_Email).text.toString()
         var cpf = findViewById<TextView>(R.id.campo_cpf).text.toString()
         var senha = findViewById<TextView>(R.id.cad_campo_senha).text.toString()
-        var userService = UserService(cpf.toInt(), email, nome, senha)
+        var userService = UserService(cpf.toLong(), email, nome, senha)
         userService.save(LMSApplication.getInstance().applicationContext)
         startActivity(intent)
     }
