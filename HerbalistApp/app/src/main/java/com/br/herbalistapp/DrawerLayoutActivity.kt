@@ -99,8 +99,16 @@ class DrawerLayoutActivity : AppCompatActivity(), NavigationView.OnNavigationIte
     }
 
     fun taskAnimals() {
-        val animals = AnimalService.getAnimals(this)
-        recycler_animals?.adapter = AnimalAdapter(animals) {onClickAnimal(it)}
+        Thread{
+            val animals = AnimalService.getUsuario(this)
+
+            runOnUiThread {
+                recycler_animals?.adapter = AnimalAdapter(animals) {onClickAnimal(it)}
+            }
+
+        }.start()
+
+
     }
 
     fun onClickAnimal(animal: Animal) {
