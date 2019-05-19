@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "68479829839",
-    "firebase_url": "https://herbalistapp.firebaseio.com",
-    "project_id": "herbalistapp",
-    "storage_bucket": "herbalistapp.appspot.com"
+    "project_number": "82364379938",
+    "firebase_url": "https://lmsherbalist-fdd65.firebaseio.com",
+    "project_id": "lmsherbalist-fdd65",
+    "storage_bucket": "lmsherbalist-fdd65.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:68479829839:android:e9d86f57e24a5b96",
+        "mobilesdk_app_id": "1:82364379938:android:e9d86f57e24a5b96",
         "android_client_info": {
           "package_name": "com.br.herbalistapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "68479829839-v55fc4eiicer61k9fshc32o8s4o7cgqj.apps.googleusercontent.com",
+          "client_id": "82364379938-0deu66ugm29gi02m6b7qudohd7nf540g.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDu7U2FuSxp4N5pwynalGEnhAAtG9AtG4A"
+          "current_key": "AIzaSyDTbQP-gLHEdjTqN8RiHjIjO6FRG8SgV3Q"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "68479829839-v55fc4eiicer61k9fshc32o8s4o7cgqj.apps.googleusercontent.com",
+              "client_id": "82364379938-0deu66ugm29gi02m6b7qudohd7nf540g.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
