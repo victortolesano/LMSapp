@@ -2,7 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.br.herbalistapp">
 
+
     <uses-permission android:name="android.permission.INTERNET"/>
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!--<uses-feature android:name="android:hardware.camera2" android:required="true"/>-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
 
     <application
             android:allowBackup="true"
@@ -28,8 +37,8 @@
         <activity android:name=".TelaConfigActivity">
         </activity>
         <activity android:name=".TelaCadastroActivity">
-        </activity>
-        <activity android:name=".TelaPerfilActivity">
+        <!--</activity>-->
+        <!--<activity android:name=".TelaPerfilActivity">-->
         </activity>
         <activity android:name=".DebugActivity">
         </activity>
