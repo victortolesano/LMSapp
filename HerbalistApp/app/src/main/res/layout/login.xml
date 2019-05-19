@@ -30,6 +30,10 @@
             android:hint="Entre com a senha"
             android:ems="10"
             android:id="@+id/campo_senha_login"/>
+    <CheckBox android:hint="Lembrar de mim"
+              android:id="@+id/campo_check_box"
+              android:layout_width="100dp"
+              android:layout_height="100dp"/>
 
     <FrameLayout android:layout_width="match_parent"
                  android:layout_height="wrap_content">
