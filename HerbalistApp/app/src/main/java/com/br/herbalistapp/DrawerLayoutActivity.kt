@@ -17,6 +17,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.br.herbalistapp.adapters.AnimalAdapter
 import com.br.herbalistapp.domain.Animal
+import com.br.herbalistapp.persistence.LoginPersistence
 import com.br.herbalistapp.services.AnimalService
 import kotlinx.android.synthetic.main.activity_drawer_layout.*
 import kotlinx.android.synthetic.main.app_bar_drawer_layout.*
@@ -69,6 +70,8 @@ class DrawerLayoutActivity : AppCompatActivity(), NavigationView.OnNavigationIte
         var id = item?.itemId
 
         if (id == R.id.action_sair){
+            println("==================\nCAIU AQUI MERDA\n========================")
+            LoginPersistence("", "").delete()
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             Toast.makeText(this,"Saindo", Toast.LENGTH_SHORT).show()
