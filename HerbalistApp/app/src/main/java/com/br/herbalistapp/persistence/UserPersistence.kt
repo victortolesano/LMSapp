@@ -20,8 +20,12 @@ class UserPersistence: Serializable {
 
     var password: String = ""
 
-    @ColumnInfo(name = "synchronized")
-    var synchronized: Int = 0
+    /**
+     * Synchronized: whether this `user` instance (row) is synchronized with the remote users server.
+     * (0 or 1)
+     */
+    @ColumnInfo(name = "syncd")
+    var syncd: Int = 0
 
     override fun toString(): String {
         return name + " (" + cpf + ")"

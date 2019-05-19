@@ -14,10 +14,10 @@ class UserService(val cpf: Long, val email: String, val name: String, val passwo
         val userPersistence = UserPersistence.fromService(this)
 
         if (AndroidUtils.isInternetDisponivel(context)) {
-            val memoryUsers = dao.getAll()
+            val memoryUsers = dao.getUnsyncd()
             for (user in memoryUsers) {
                 this.postAPI(user)
-                user.synchronized = 1
+                user.syncd = 1
                 dao.flagAsSynchronized(user)
             }
             this.postAPI(userPersistence)

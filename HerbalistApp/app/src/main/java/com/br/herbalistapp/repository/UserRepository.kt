@@ -12,8 +12,8 @@ interface UserRepository {
     @Query("SELECT * from user")
     fun getAll(): List<UserPersistence>
 
-    @Query("SELECT * FROM user WHERE synchronized = 0")
-    fun getUnsynchronized(): List<UserPersistence>
+    @Query("SELECT * FROM user WHERE syncd = 0")
+    fun getUnsyncd(): List<UserPersistence>
 
     @Query("SELECT * FROM user WHERE name = :name AND password = :password")
     fun getByUsernameAndPassword(name: String, password: String): UserPersistence?
