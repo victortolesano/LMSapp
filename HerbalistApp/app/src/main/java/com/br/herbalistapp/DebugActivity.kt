@@ -3,6 +3,7 @@ package com.br.herbalistapp
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 
 open class DebugActivity : AppCompatActivity() {
 
@@ -46,4 +47,6 @@ open class DebugActivity : AppCompatActivity() {
         super.onDestroy()
         Log.d(TAG,"${clasName} onDestroy chamado")
     }
+
+    open fun onClick(v: View?) {}
 }
