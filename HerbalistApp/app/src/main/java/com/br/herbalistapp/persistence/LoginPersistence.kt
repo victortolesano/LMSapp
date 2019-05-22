@@ -8,16 +8,28 @@ class LoginPersistence(val userName: String, val password: String) {
         val editor = LMSApplication.getInstance().applicationContext
             .getSharedPreferences("STORAGE", 0)
             .edit()
-        editor.putString(this.userName, this.password)
+        editor.putString("usuario", this.userName)
         editor.apply()
-        println("save customer " + this)
+        println("===========================================")
+        println("save user " + this)
+        println("===========================================")
     }
 
-    fun find(): LoginPersistence {
+    fun find(): LoginPersistence? {
         val prefs = LMSApplication.getInstance().applicationContext
             .getSharedPreferences("STORAGE", 0)
-        val password = prefs.getString(this.userName, "")
-        return LoginPersistence(this.userName, password)
+        val userName = prefs.getString("usuario", "")
+        if (userName.isBlank()) {
+            return null
+        }
+        return LoginPersistence(userName, "")
+    }
+
+    fun delete() {
+        val editor = LMSApplication.getInstance().applicationContext
+            .getSharedPreferences("STORAGE", 0)
+            .edit()
+        editor.remove("usuario").apply()
     }
 
     override fun toString(): String {
