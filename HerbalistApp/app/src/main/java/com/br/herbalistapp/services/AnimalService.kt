@@ -17,7 +17,7 @@ object AnimalService {
         val json = URL(url).readText()
         Log.d(TAG,json)
 
-        return ArrayList()
+        return parserJson(json)
 
     }
 
