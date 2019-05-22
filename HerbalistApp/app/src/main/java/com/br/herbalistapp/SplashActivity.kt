@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import kotlin.concurrent.thread
 
-class splash_Activity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
