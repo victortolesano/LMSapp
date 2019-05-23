@@ -1,17 +1,15 @@
 package com.br.herbalistapp
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.br.herbalistapp.services.UserService
 import kotlinx.android.synthetic.main.cadastro.*
-import kotlinx.android.synthetic.main.login.*
 
 class TelaCadastroActivity : DebugActivity() {
 
@@ -36,10 +34,14 @@ class TelaCadastroActivity : DebugActivity() {
     }
 
     fun onClickEnviarCadastro() {
-        var nome = findViewById<TextView>(R.id.cad_nome)
-        var email = findViewById<TextView>(R.id.cad_campo_Email)
-        var cpf = findViewById<TextView>(R.id.campo_cpf)
-        var senha = findViewById<TextView>(R.id.cad_campo_senha)
+        val intent = Intent(this,DrawerLayoutActivity::class.java)
+        var nome = findViewById<TextView>(R.id.cad_nome).text.toString()
+        var email = findViewById<TextView>(R.id.cad_campo_Email).text.toString()
+        var cpf = findViewById<TextView>(R.id.campo_cpf).text.toString()
+        var senha = findViewById<TextView>(R.id.cad_campo_senha).text.toString()
+        var userService = UserService(cpf.toInt(), email, nome, senha)
+        userService.save(LMSApplication.getInstance().applicationContext)
+        startActivity(intent)
     }
 
     fun enviarCadastro(view: View){
