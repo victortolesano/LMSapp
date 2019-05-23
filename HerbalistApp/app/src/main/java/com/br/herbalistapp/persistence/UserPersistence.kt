@@ -10,7 +10,7 @@ class UserPersistence: Serializable {
     @PrimaryKey
     var id:Long = 0
 
-    var cpf: Int = 0
+    var cpf: Long = 0
 
     var email: String = ""
 
